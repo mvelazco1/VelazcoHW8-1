@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Build control_GPIO.cpp"
+g++ control_GPIO.cpp -o control_GPIO
+
+echo " Configue GPIO pins"
+config-pin -a p9.12 out
+config-pin -a p8.16 in+
+echo "Finished"
